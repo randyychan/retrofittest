@@ -38,8 +38,8 @@ retrolambda {
     javaVersion JavaVersion.VERSION_1_7
 
     Properties properties = new Properties()
-    properties.load(project.rootProject.file('app/my.properties').newDataInputStream())
+    properties.load(project.file('my.properties').newDataInputStream())
 
     jdk properties.getProperty('jdk_path')
-    jdk properties.getProperty('old_jdk_path')
+    oldJdk properties.getProperty('old_jdk_path')
 }
